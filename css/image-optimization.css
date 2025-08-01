@@ -1,0 +1,639 @@
+/* 
+ * Comprehensive Image Optimization & Cross-Platform Compatibility
+ * Optimized for Windows, Mac, Tablets, Android, iPhone, iPad
+ * Ensures proper image alignment, scaling, and responsiveness
+ */
+
+/* ===== GLOBAL IMAGE OPTIMIZATION ===== */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+    image-rendering: optimizeQuality;
+}
+
+/* Responsive images with aspect ratio preservation */
+.img-responsive {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* ===== HERO SECTION BACKGROUND OPTIMIZATION (INDEX.HTML) ===== */
+.hero-section {
+    background: url('../img/ban2.png') no-repeat center center;
+    background-size: cover;
+    background-attachment: scroll;
+    background-position: center center;
+    background-color: #007bff;
+    min-height: 70vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 5%;
+    backface-visibility: hidden;
+    will-change: transform;
+    transform: translateZ(0);
+}
+
+/* Fallback for devices that don't support fixed attachment */
+@supports not (background-attachment: fixed) {
+    .hero-section {
+        background-attachment: scroll;
+    }
+}
+
+/* ===== PAGE HEADERS OPTIMIZATION (ALL OTHER PAGES) ===== */
+.page-header {
+    background-image: url('../img/banner2.png');
+    background-color: rgb(0, 123, 255);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    min-height: 40vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 5%;
+    color: white;
+    backface-visibility: hidden;
+    will-change: transform;
+    transform: translateZ(0);
+}
+
+/* ===== LOGO OPTIMIZATION ===== */
+.navbar-brand img {
+    height: 72px;
+    max-width: 240px;
+    width: auto;
+    object-fit: contain;
+    object-position: left center;
+}
+
+/* ===== PRODUCT IMAGES OPTIMIZATION ===== */
+.product-image {
+    width: 100%;
+    height: 250px;
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: #f8f9fa;
+    border-radius: 15px 15px 0 0;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #e9ecef;
+}
+
+.tank-image {
+    width: 100%;
+    height: 250px;
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: #f8f9fa;
+    border-radius: 15px 15px 0 0;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #e9ecef;
+}
+
+/* ===== PRODUCT FRAME OPTIMIZATION FOR COMPLETE VISIBILITY ===== */
+.product-frame {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+}
+
+.product-frame img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    object-position: center;
+    border-radius: 8px;
+}
+
+/* Enhanced product card styling for better product display */
+.product-card .product-image,
+.tank-card .tank-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Alternative: For background images in product cards */
+.product-bg-contain {
+    background-size: contain !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    background-color: #f8f9fa !important;
+}
+
+/* Hero image containment classes */
+.hero-bg-contain {
+    background-size: contain !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+}
+
+.hero-bg-fit {
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+}
+
+/* ===== TEAM/ABOUT IMAGES ===== */
+.team-image, .about-image {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+.about-section img {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 15px;
+}
+
+/* ===== CROSS-PLATFORM RESPONSIVE BREAKPOINTS ===== */
+
+/* 4K Displays (3840px+) */
+@media screen and (min-width: 3840px) {
+    .hero-section {
+        min-height: 80vh;
+        background-size: cover;
+    }
+    .page-header {
+        min-height: 50vh;
+        background-size: cover;
+        background-position: center center;
+    }
+    .navbar-brand img {
+        height: 90px;
+        max-width: 300px;
+    }
+    .product-image, .tank-image {
+        height: 350px;
+    }
+}
+
+/* Large Desktop (1920px - 3839px) */
+@media screen and (min-width: 1920px) and (max-width: 3839px) {
+    .hero-section {
+        min-height: 75vh;
+    }
+    .page-header {
+        min-height: 45vh;
+        background-size: cover;
+        background-position: center center;
+    }
+    .navbar-brand img {
+        height: 80px;
+        max-width: 280px;
+    }
+    .product-image, .tank-image {
+        height: 300px;
+    }
+}
+
+/* Standard Desktop (1200px - 1919px) */
+@media screen and (min-width: 1200px) and (max-width: 1919px) {
+    .hero-section {
+        min-height: 70vh;
+    }
+    .navbar-brand img {
+        height: 72px;
+        max-width: 240px;
+    }
+    .product-image, .tank-image {
+        height: 250px;
+    }
+}
+
+/* Small Desktop/Large Laptop (992px - 1199px) */
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+    .hero-section {
+        min-height: 65vh;
+        padding: 0 3%;
+    }
+    .page-header {
+        min-height: 35vh;
+        padding: 0 3%;
+    }
+    .navbar-brand img {
+        height: 65px;
+        max-width: 200px;
+    }
+    .product-image, .tank-image {
+        height: 220px;
+        background-size: contain;
+        padding: 15px;
+    }
+}
+
+/* Tablet Landscape (768px - 991px) */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .hero-section {
+        min-height: 60vh;
+        justify-content: center;
+        text-align: center;
+        padding: 0 2%;
+        background-attachment: scroll;
+        background-size: contain;
+    }
+    .page-header {
+        min-height: 30vh;
+        justify-content: center;
+        text-align: center;
+        padding: 0 2%;
+        background-size: contain;
+    }
+    .navbar-brand img {
+        height: 55px;
+        max-width: 180px;
+    }
+    .product-image, .tank-image {
+        height: 200px;
+        background-size: contain;
+        padding: 12px;
+    }
+    .team-image {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+/* Tablet Portrait & Large Mobile (576px - 767px) */
+@media screen and (min-width: 576px) and (max-width: 767px) {
+    .hero-section {
+        min-height: 50vh;
+        justify-content: center;
+        text-align: center;
+        padding: 0 1rem;
+        background-attachment: scroll;
+        background-position: center center;
+        background-size: contain;
+    }
+    .page-header {
+        min-height: 25vh;
+        justify-content: center;
+        text-align: center;
+        padding: 0 1rem;
+        background-size: contain;
+    }
+    .navbar-brand img {
+        height: 45px;
+        max-width: 150px;
+    }
+    .product-image, .tank-image {
+        height: 180px;
+        background-size: contain;
+        padding: 10px;
+    }
+    .team-image {
+        width: 120px;
+        height: 120px;
+    }
+    .about-section img {
+        max-height: 250px;
+    }
+}
+
+/* Small Mobile (320px - 575px) */
+@media screen and (max-width: 575px) {
+    .hero-section {
+        min-height: 45vh;
+        justify-content: center;
+        text-align: center;
+        padding: 0 1rem;
+        background-attachment: scroll;
+        background-position: center center;
+        background-size: contain;
+    }
+    .page-header {
+        min-height: 20vh;
+        justify-content: center;
+        text-align: center;
+        padding: 0 1rem;
+        background-size: contain;
+    }
+    .navbar-brand img {
+        height: 35px;
+        max-width: 120px;
+    }
+    .product-image, .tank-image {
+        height: 150px;
+        background-size: contain;
+        padding: 8px;
+    }
+    .team-image {
+        width: 100px;
+        height: 100px;
+    }
+    .about-section img {
+        max-height: 200px;
+    }
+}
+
+/* ===== DEVICE-SPECIFIC OPTIMIZATIONS ===== */
+
+/* iPhone X and newer (notch devices) */
+@media screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
+    .hero-section {
+        padding-top: env(safe-area-inset-top);
+        min-height: calc(50vh - env(safe-area-inset-top));
+    }
+}
+
+/* iPad Pro */
+@media screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) {
+    .hero-section {
+        min-height: 60vh;
+        background-attachment: scroll;
+    }
+    .product-image, .tank-image {
+        height: 220px;
+    }
+}
+
+/* iPad Air/Standard */
+@media screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
+    .hero-section {
+        min-height: 55vh;
+        background-attachment: scroll;
+    }
+    .product-image, .tank-image {
+        height: 200px;
+    }
+}
+
+/* ===== HIGH DPI/RETINA DISPLAY SUPPORT ===== */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    .navbar-brand img {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+    }
+
+    .page-header {
+        background-image: url('../img/banner2.png');
+        background-size: cover;
+    }
+
+    .hero-section {
+        background-image: url('../img/ban2.png');
+        background-size: cover;
+    }
+}
+
+/* ===== TOUCH DEVICE OPTIMIZATIONS ===== */
+@media (hover: none) and (pointer: coarse) {
+    .product-card:hover {
+        transform: none;
+    }
+    
+    .tank-card:hover {
+        transform: none;
+    }
+    
+    /* Increase tap targets for mobile */
+    .btn {
+        min-height: 44px;
+        padding: 12px 24px;
+    }
+}
+
+/* ===== PRINT STYLES ===== */
+@media print {
+    .hero-section, .page-header {
+        background: none !important;
+        color: #000 !important;
+        min-height: auto !important;
+    }
+    
+    .navbar-brand img {
+        max-height: 40px;
+    }
+    
+    .product-image, .tank-image {
+        height: auto;
+        min-height: 100px;
+        border: 1px solid #ccc;
+    }
+}
+
+/* ===== ACCESSIBILITY IMPROVEMENTS ===== */
+@media (prefers-reduced-motion: reduce) {
+    .hero-section {
+        background-attachment: scroll;
+    }
+    
+    .product-card, .tank-card {
+        transition: none;
+    }
+}
+
+/* ===== DARK MODE SUPPORT ===== */
+@media (prefers-color-scheme: dark) {
+    .product-image, .tank-image {
+        filter: brightness(0.9);
+    }
+}
+
+/* ===== PERFORMANCE OPTIMIZATIONS ===== */
+.hero-section, .page-header {
+    will-change: transform;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+}
+
+/* Ensure page header image loads properly across all devices */
+.page-header {
+    background-image: url('../img/banner2.png') !important;
+}
+
+/* Additional fallback for older browsers */
+@supports not (background-size: cover) {
+    .page-header {
+        background-size: 100% auto;
+    }
+}
+
+/* Image lazy loading support */
+img[loading="lazy"] {
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+img[loading="lazy"].loaded {
+    opacity: 1;
+}
+
+/* ===== SPECIFIC BROWSER FIXES ===== */
+
+/* Safari iOS background-attachment fix */
+@supports (-webkit-touch-callout: none) {
+    .hero-section, .page-header {
+        background-attachment: scroll;
+    }
+
+    .page-header {
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+}
+
+/* Edge/IE compatibility */
+@supports (-ms-ime-align: auto) {
+    .product-image, .tank-image {
+        background-size: cover;
+        background-position: center;
+    }
+}
+
+/* Firefox optimization */
+@-moz-document url-prefix() {
+    .hero-section, .page-header {
+        background-attachment: scroll;
+    }
+}
+
+/* ===== ADDITIONAL CROSS-PLATFORM FIXES ===== */
+
+/* Windows Edge/Chrome specific fixes */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    .hero-section, .page-header {
+        background-size: cover !important;
+        background-position: center center !important;
+    }
+}
+
+/* Android Chrome specific optimization */
+@media screen and (-webkit-min-device-pixel-ratio: 1.5) and (orientation: portrait) {
+    .hero-section {
+        min-height: 45vh;
+        background-attachment: scroll;
+        background-size: contain;
+    }
+    .page-header {
+        background-size: contain;
+    }
+    .page-header {
+        min-height: 35vh;
+        background-attachment: scroll;
+        background-size: cover;
+        background-position: center center;
+    }
+    .product-image, .tank-image {
+        height: 180px;
+    }
+}
+
+/* iPhone specific optimizations */
+@media only screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) {
+    .hero-section {
+        min-height: 50vh;
+        background-position: center bottom;
+    }
+}
+
+/* Samsung Galaxy & Android tablets */
+@media screen and (min-device-width: 800px) and (max-device-width: 1280px) and (-webkit-min-device-pixel-ratio: 1.5) {
+    .hero-section {
+        min-height: 55vh;
+        background-attachment: scroll;
+        background-size: contain;
+    }
+    .page-header {
+        background-size: contain;
+    }
+    .product-image, .tank-image {
+        height: 200px;
+    }
+}
+
+/* Surface Pro and Windows tablets */
+@media screen and (min-device-width: 1366px) and (max-device-width: 1920px) and (-webkit-min-device-pixel-ratio: 1.25) {
+    .hero-section {
+        min-height: 65vh;
+    }
+    .navbar-brand img {
+        height: 70px;
+    }
+}
+
+/* MacBook Pro Retina */
+@media screen and (min-device-width: 1440px) and (max-device-width: 1920px) and (-webkit-min-device-pixel-ratio: 2) {
+    .hero-section {
+        min-height: 70vh;
+        background-attachment: fixed;
+    }
+    .product-image, .tank-image {
+        height: 270px;
+    }
+}
+
+/* ===== FINAL FALLBACKS ===== */
+
+/* Ensure images never break layout and show full products */
+.product-image, .tank-image {
+    min-height: 150px;
+    max-height: 350px;
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    background-size: contain !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+}
+
+/* Force product visibility override for all cases */
+.product-bg-contain {
+    background-size: contain !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    background-color: #f8f9fa !important;
+    padding: 15px !important;
+}
+
+/* Logo fallback */
+.navbar-brand img {
+    min-height: 30px;
+    max-height: 100px;
+}
+
+/* Hero section fallback - ensure images always fit frame */
+.hero-section, .page-header {
+    background-color: #007bff;
+    color: white;
+    background-size: contain !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+}
+
+/* Force hero image fitting for all scenarios */
+.hero-section {
+    background-image: url('../img/ban2.png') !important;
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+}
+
+.page-header {
+    background-image: url('../img/banner2.png') !important;
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+}
