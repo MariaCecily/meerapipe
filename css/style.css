@@ -1266,6 +1266,119 @@ h1, h2, h3, h4, h5, h6 {
     background: linear-gradient(135deg, #17a2b8, #138496);
     color: white;
 }
+/* ================== 
+   TESTMONIAL ELEMENTS
+   ================== */
+.testimonial-item {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 1rem;
+    padding: 2.5rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%; /* Ensure all items have the same height */
+    display: flex;
+    flex-direction: column;
+}
+
+.testimonial-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.1);
+}
+
+/* Client Image Styling */
+.testimonial-item img {
+    border-color: var(--primary) !important; /* Use primary color for border */
+    border-width: 3px !important;
+    border-style: solid;
+    margin-bottom: 1.5rem !important;
+}
+
+/* Testimonial Text Container */
+.testimonial-text {
+    background-color: var(--bs-light) !important; /* Use Bootstrap's light color */
+    border-radius: 0.75rem;
+    padding: 2rem !important;
+    margin-bottom: 1.5rem;
+    flex-grow: 1; /* Allow the text area to grow to fill space */
+}
+
+.testimonial-text p {
+    font-style: italic;
+    font-size: 1.1rem;
+    color: #495057; /* Use a slightly darker color for readability */
+}
+
+/* Client Meta (Name and Title) Styling */
+.testimonial-meta {
+    margin-top: auto; /* Push the meta to the bottom */
+}
+
+.testimonial-meta h5 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    color: #212529; /* Use a dark color for the name */
+    margin-bottom: 0.25rem;
+}
+
+.testimonial-meta p.text-primary {
+    font-size: 0.9rem;
+    color: var(--primary) !important; /* Use the primary color */
+}
+/* ==================
+   OWL CAROUSEL NAVIGATION STYLING
+   ================== */
+
+/* Carousel Navigation Arrows */
+.owl-carousel.testimonial-carousel .owl-nav button.owl-prev,
+.owl-carousel.testimonial-carousel .owl-nav button.owl-next {
+    width: 40px;
+    height: 40px;
+    background: var(--primary);
+    color: #ffffff;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    opacity: 0.8;
+}
+
+.owl-carousel.testimonial-carousel .owl-nav button.owl-prev {
+    left: -20px; /* Position off the left side */
+}
+
+.owl-carousel.testimonial-carousel .owl-nav button.owl-next {
+    right: -20px; /* Position off the right side */
+}
+
+.owl-carousel.testimonial-carousel .owl-nav button.owl-prev:hover,
+.owl-carousel.testimonial-carousel .owl-nav button.owl-next:hover {
+    background: var(--primary-dark); /* Darken on hover */
+    transform: translateY(-50%) scale(1.1);
+    opacity: 1;
+}
+
+/* Carousel Dots */
+.owl-carousel.testimonial-carousel .owl-dots {
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+.owl-carousel.testimonial-carousel .owl-dot {
+    width: 12px;
+    height: 12px;
+    margin: 0 6px;
+    background-color: #d1d1d1;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.owl-carousel.testimonial-carousel .owl-dot.active {
+    background-color: var(--primary);
+}
+
 
 /* ================== 
    FLOATING ELEMENTS
@@ -2368,6 +2481,20 @@ textarea:focus {
         break-inside: avoid;
         border: 1px solid #000000;
         background: transparent !important;
+    }
+}
+============== */
+@media (max-width: 991.98px) {
+    .testimonial-item {
+        padding: 1.5rem;
+    }
+
+    .testimonial-text {
+        padding: 1.5rem !important;
+    }
+
+    .owl-carousel.testimonial-carousel .owl-nav {
+        display: none; /* Hide navigation arrows on smaller screens */
     }
 }
 
