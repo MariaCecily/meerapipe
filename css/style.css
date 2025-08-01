@@ -1296,7 +1296,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Testimonial Text Container */
 .testimonial-text {
-    background-color: var(--bs-light) !important; /* Use Bootstrap's light color */
+    background-color: #efc9c9  !important; /* Use Bootstrap's light color */
     border-radius: 0.75rem;
     padding: 2rem !important;
     margin-bottom: 1.5rem;
