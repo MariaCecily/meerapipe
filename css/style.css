@@ -323,7 +323,7 @@ h1, h2, h3, h4, h5, h6 {
 .hero-section {
     height: 70vh;
     min-height: 500px;
-    background: url('../img/ban2.jpg') center/cover no-repeat;
+    background: url('../img/ban2.png') center/cover no-repeat;
     background-attachment: fixed;
     display: flex;
     align-items: center;
