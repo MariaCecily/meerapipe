@@ -1325,9 +1325,7 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 0.9rem;
     color: var(--primary) !important; /* Use the primary color */
 }
-.container-xxl.py-5 {
-    background-color: #2779c1; /* A very light blue color */
-}
+
 
 /* ==================
    OWL CAROUSEL NAVIGATION STYLING
